@@ -1,0 +1,47 @@
+// Calcula el promedio de una lista de N datos repetidamente hasta que el usuario decida salir
+
+Algoritmo PromedioInteractivo
+	
+    Definir n, i, dato, acum, prom Como Real
+    Definir continuar Como Caracter
+	
+    continuar <- "S"
+	
+    Mientras Mayusculas(continuar) = "S" Hacer
+		
+        Escribir "Ingrese la cantidad de datos:"
+        Repetir
+            Leer n
+            Si n <= 0 Entonces
+                Escribir "El número debe ser positivo y distinto de cero."
+            Fin Si
+        Hasta Que n > 0
+		
+        acum <- 0
+		
+        Para i <- 1 Hasta n Con Paso 1 Hacer
+            Escribir "Ingrese el dato ", i, ":"
+            Repetir
+                Leer dato
+                Si dato < 0 Entonces
+                    Escribir "El dato debe ser positivo."
+                Fin Si
+            Hasta Que dato >= 0
+            acum <- acum + dato
+        Fin Para
+		
+        prom <- acum / n
+		
+        Escribir "El promedio es: ", prom
+		
+        Escribir "¿Desea calcular otro promedio? (S/N):"
+        Leer continuar
+		
+    Fin Mientras
+	
+    Escribir "Gracias por usar el programa. ¡Hasta luego!"
+	
+	
+FinAlgoritmo
+
+Git Commit -> Mejora de bucle, no es necesario reiniciar para realizar otra operacion
